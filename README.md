@@ -1,1 +1,1 @@
-# KNN-with-KFold-CrossValidation in C#
+# KNN with KFold-Crossvalidation in C#
