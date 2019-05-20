@@ -12,21 +12,17 @@ namespace kNN
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter path: ");
+            Console.WriteLine("Enter filepath: ");
             string path = Console.ReadLine();
-            Console.WriteLine("Type seperator for values:");
+            Console.WriteLine("Seperatorcharacter for values:");
             char seperator = Console.ReadKey().KeyChar;
-            Console.WriteLine("Number of Columns");
+            Console.WriteLine("Number of columns: ");
             int numberOfColumns = Convert.ToInt32(Console.ReadLine());
             string[] dataSets = File.ReadAllLines(path);
             DataObject[] objects = DatasetPreparer.PrepareObjects(dataSets, seperator, numberOfColumns);
 
             KFold k = new KFold(new KNN(5));
-            //System.Diagnostics.Stopwatch watch = new System.Diagnostics.Stopwatch();
-            //watch.Start();
             k.KFoldCrossValidation(objects, 10);
-            //watch.Stop();
-            //Console.WriteLine("Elapsed time: " + watch.Elapsed);
             Console.ReadLine();
             
         }

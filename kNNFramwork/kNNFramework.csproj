@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="ConfusionMatrix.cs" />
     <Compile Include="DataObject.cs" />
-    <Compile Include="DataSet.cs" />
     <Compile Include="IClassifier.cs" />
     <Compile Include="KFold.cs" />
     <Compile Include="KNN.cs" />
